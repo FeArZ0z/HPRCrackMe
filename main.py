@@ -1,14 +1,16 @@
 import PySimpleGUI as sg
 
-layout = [[sg.Text("Check your License")], [sg.Button("OK")]]
+layout = [
+    [sg.Text('Check your License')], 
+    [sg.Text('Login', size=(15,1)), sg.InputText()],
+    [sg.Text('Password', size=(15,1)), sg.InputText()],
+    [sg.Text('License Key', size=(15,1)), sg.InputText()],
+    [sg.Submit(), sg.Cancel()]
+    ]
 #margins = (200,150)
 window = sg.Window("License Check", layout, margins=(200,150))
 
-while True:
-    event, values = window.read()
-    if event =="OK" or event == sg.WIN_CLOSED:
-        break
 
-
+event, values = window.read()
 
 window.close()
