@@ -1,5 +1,6 @@
 # HPRCrackMe
 
-Authors: 
+## Authors: 
 * Maximilian Spiesmaier
 * Lisa Lackner
+
