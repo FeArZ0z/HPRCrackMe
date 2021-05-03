@@ -3,7 +3,7 @@ import traceback
 
 layout = [
     [sg.Text('Check your License')], 
-    [sg.Text('Login', size=(15,1)), sg.InputText()],
+    [sg.Text('Username', size=(15,1)), sg.InputText()],
     [sg.Text('Password', size=(15,1)), sg.InputText()],
     [sg.Text('License Key', size=(15,1)), sg.InputText()],
     [sg.Submit(), sg.Cancel()]
@@ -18,8 +18,10 @@ try:
         if event == sg.WIN_CLOSED:
             break
         if event == 'Submit':
-            if values[0].size == 0:
-                window['-OUT-'].update(values['-IN-'])
+            if len(values[0]) == 0 or len(values[1]) == 0 or len(values[2]) == 0:
+                sg.Popup('Please fill all fields')
+        if event == 'Cancel':
+            break
     window.close()
 except Exception as e:
     tb = traceback.format_exc()
