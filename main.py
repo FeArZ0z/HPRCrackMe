@@ -23,6 +23,8 @@ try:
                 sg.Popup('Please fill all fields')
             else:
                 #TODO: implement License Key validation
+                # String builder from input encode in b64 and compare
+                # if not the same: Contacting Server, if the same Success message
                 sg.Popup('Contacting Server, this may take a while.')
         if event == 'Cancel':
             break
