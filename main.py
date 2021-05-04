@@ -28,7 +28,7 @@ try:
                 joinedWords = values[0] + ',' + values[1] + ',' + values[2]
                 encodedWords = base64.b64encode(joinedWords.encode("utf-8"))
                 #sg.Popup(encodedWords)
-                licenseBase = "johndoe,rottenTomatoes24,1324-DEAD-BEEF-5678"
+                licenseBase = "johndoe,rottenTomatoes24,1234-DEAD-BEEF-5678"
                 validLicense = base64.b64encode(licenseBase.encode("utf-8"))
                 # Check if input == license
                 if (encodedWords == validLicense):#
